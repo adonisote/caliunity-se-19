@@ -10,7 +10,9 @@
 -   app/profile/fails.html
 -   app/logbook
 
--   Using:
+## Branch -> PROFILE
+
+Using:
 
 1. Start with index.html
 2. Click on Register

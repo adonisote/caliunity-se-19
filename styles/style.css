@@ -80,6 +80,7 @@ This palette is designed to create a balanced and harmonious visual experience f
 
 html {
   font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
   color: #333333;
   
 
@@ -105,9 +106,65 @@ h2 {
 header {
   background-color: #003366;
   color: white;
-  padding: 20px;
+  padding: 24px;
 }
 section{
   background-color: #F2F2F2;
+  padding: 24px;
 }
 
+li {
+  list-style-type: none;
+}
+
+section img {
+  padding: 8px;
+}
+
+hr {
+  border: 0.1px solid #003366;
+}
+
+p + hr {
+  border: 0.1px solid white
+
+}
+
+a:link {
+  color: #FF6600;
+}
+
+a:visited {
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+}
+
+
+button {
+  background-color: #FF6600;
+  color: white;
+  font-size: 12 px;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  width: 50%;
+  float:left
+}
+
+.noactive {
+  background-color: white;
+  color: #FF6600;
+}
+
+.navb {
+  width: calc(33.33%);
+}
+
+@media (max-width:768px){
+  body{
+    color: #FF6600;
+    font-size: 120%
+  };
+}
