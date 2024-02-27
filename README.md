@@ -2,6 +2,23 @@
 
 ## A platform for calisthenics athletes
 
+### Main pages
+
+-   index.html
+-   app/index.html
+-   app/profile/index.html
+-   app/profile/fails.html
+-   app/logbook
+
+-   Using:
+
+1. Start with index.html
+2. Click on Register
+3. Click on Continue
+4. Explore the webapp
+
+# Not important for Handin
+
 ### Before you work:
 
 Pull
