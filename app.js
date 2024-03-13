@@ -1,11 +1,11 @@
 import Express from "express";
+import {logger} from "./middlewares/logger.js"
 
 const app = Express()
 const PORT = 3005
 
-app.get("/", (req, res) => {
-    res.send('Hello calisthenics app')
-})
+app.use(logger)
+
 
 
 
