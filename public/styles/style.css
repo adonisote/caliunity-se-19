@@ -1,83 +1,3 @@
-/*
-#f6bd60 hunyadi yellow
-#f7ede2 linen
-#f5cac3 tea rose
-#84a59d cambrige blue
-#f28482 light coral
-
-
-Main Colors
-#000000 Black with Blue
-#3D3D3D Grey: for text only
-
-#5680e9 Blue (crayola) -> Contrast with white
-#84ceeb Sky blue  -> 
-#5ab9ea Picton Blue
-#c1c8e4 Periwinkle
-#8860d0 Amethyst -> Contrast with white
-#FFFFFF White:text -> Good contrast with Blue crayola and Amethyst
-
-Gray scale that can be combined with white
-#767676 gray
-#507c8e (sky blue)
-#3d7d9e (picton blue)
-#4d72cf (blue crayola)
-#717586 (periwinkle)
-#8860cf (amethyst)
-
-
-
-Primary Color - CaliUnity Blue:
-
-Use: Main brand color, buttons, and headers.
-HEX: #003366
-
-
-Accent Color - Vibrant Orange:
-
-Use: Call-to-action buttons, links, and highlights.
-HEX: #FF6600
-
-
-Background Color - Light Grey:
-
-Use: Background for content areas to reduce eye strain.
-HEX: #F2F2F2
-
-
-Text Color - Dark Grey:
-
-Use: Primary text color for readability.
-HEX: #333333
-
-
-Success Color - Green:
-
-Use: Indicators for successful actions, progress bars, and success messages.
-HEX: #28A745
-
-
-Error Color - Red:
-
-Use: Error messages, alerts, and indicators for attention.
-HEX: #DC3545
-
-
-Neutral Color - Medium Grey:
-
-Use: Subtexts, labels, and secondary information.
-HEX: #6C757D
-
-
-Highlight Color - Sunshine Yellow:
-
-Use: Highlights for important information, warning messages.
-HEX: #FFC107
-This palette is designed to create a balanced and harmonious visual experience for users, promoting a sense of energy and motivation while ensuring good readability and usability. 
-
-*/
-
-
 html {
   font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
@@ -154,7 +74,7 @@ button {
 }
 
 .noactive {
-  background-color: white;
+  background-color:blue;
   color: #FF6600;
 }
 

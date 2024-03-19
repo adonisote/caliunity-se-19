@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register</title>
+    </head>
+    <body>
+        <h1>Join Us</h1>
+        <form action="register.html">
+            <section>
+                <p>
+                    <label for="username">
+                        <span class="mobile-hide"> Name: </span>
+                        <strong
+                            ><span
+                                class="mobile-hide"
+                                aria-label="required"
+                            ></span
+                            >*</strong
+                        >
+                    </label>
+                    <input
+                        type="text"
+                        name="user_name"
+                        id="username"
+                        required
+                    />
+                </p>
+                <p>
+                    <label for="mail">
+                        <span class="mobile-hide"> E-Mail: </span>
+                        <strong
+                            ><span class="mobile-hide" aria-label="required"
+                                >*</span
+                            ></strong
+                        >
+                    </label>
+                    <input type="text" name="user_mail" id="mail" required />
+                </p>
+                <p>
+                    <label for="pwd">
+                        <span class="mobile-hide">Password:</span>
+                        <strong
+                            ><span class="mobile-hide" aria-label="required"
+                                >*</span
+                            ></strong
+                        >
+                    </label>
+                    <input type="password" name="user_pwd" id="pwd" required />
+                </p>
+                <p>
+                    <label for="confirm_pwd">
+                        <span class="mobile-hide">Confirm password:</span>
+                        <strong
+                            ><span class="mobile-hide" aria-label="required"
+                                >*</span
+                            ></strong
+                        >
+                    </label>
+                    <input
+                        type="password"
+                        name="user_pwd"
+                        id="confirm_pwd"
+                        required
+                    />
+                </p>
+                <input
+                    type="hidden"
+                    name="timestamp"
+                    id="timestamp"
+                    value="1111"
+                />
+            </section>
+            <section>
+                <p>
+                    <button type="submit">Create Account</button>
+                </p>
+            </section>
+        </form>
+        <section>
+            <p>or</p>
+        </section>
+        <section>
+            <img
+                src="/public/images/logos/google-g-2015.svg"
+                alt="google-login"
+                width="40"
+            />
+            <img src="/public/images/logos/insta.svg" width="40" />
+            <img src="/public/images/logos/face.svg" width="40" />
+        </section>
+        <section>
+            <a href=""> Login </a>
+        </section>
+    </body>
+</html>
