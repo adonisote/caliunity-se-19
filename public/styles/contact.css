@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 100;
+    src:
+      url(../font/geist-sans/Geist-Thin.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 200;
+    src:
+      url(../font/geist-sans/Geist-UltraLight.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 300;
+    src:
+      url(../font/geist-sans/Geist-Light.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 400;
+    src:
+      url(../font/geist-sans/Geist-Regular.ttf) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 500;
+    src:
+      url(../font/geist-sans/Geist-Medium.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 600;
+    src:
+      url(../font/geist-sans/Geist-SemiBold.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 700;
+    src:
+      url(../font/geist-sans/Geist-Bold.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 800;
+    src:
+      url(../font/geist-sans/Geist-Black.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 900;
+    src:
+      url(../font/geist-sans/Geist-UltraBlack.woff2) format("woff2")
+}
+
+/* @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 200;
+    src:
+      local("Geist"),
+      url(../font/geist-sans/Geist-UltraLight.woff2) format("woff")
+} */
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body, 
+input,
+textarea,
+button {
+    font-family: Geist, sans-serif;
+}
+
+.join-us {
+    background-color: #FE9B90;
+    text-align: center;
+    margin: 102px 0px 0px 0px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius:  32px 32px 0% 0%;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    
+
+}
+
+
+h1 {
+    color: #FCFCFD;
+    font-size: 47px ;
+    margin: 32px 0px 0px 0px;
+    padding: 0;
+    line-height: 115%;
+    font-weight: 800;
+}
+
+input {
+    width: calc(100% - 16px);
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #9D9DA3;
+    text-align: center;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    outline-style: solid;
+    outline-color: #8C81F7;
+    border-color: #8C81F7;
+
+}
+
+textarea {
+    width: calc(100% - 16px);
+    height: 168px;
+    resize: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+}
+
+label {
+    display: none;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-size: 16px;
+    height: 42px;
+    width: calc(100% - 16px);
+    background-color: #3C3C47;
+    color: #FCFCFD;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+}
+
+button:hover{
+    background-color: #8C81F7;
+}
+li {
+    margin: 16px 0px;
+}

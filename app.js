@@ -3,6 +3,7 @@ import {logger} from "./middlewares/logger.js"
 import path from 'path'
 import { fileURLToPath } from "url";
 
+import dataJson from "./data.json" assert {type: "json"}
 
 const app = express()
 const PORT = 3005
@@ -14,6 +15,10 @@ app.use(logger) // logger middleware
 const __filename = fileURLToPath(import.meta.url) // get the resolved path to the file
 const __dirname = path.dirname(__filename) // get the name of the directory
 
+
+app.get("/data", (req, res) => {
+    res.send(`${dataJson.id}`)
+})
 
 
 // partners route
