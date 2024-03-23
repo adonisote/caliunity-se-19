@@ -21,18 +21,12 @@ app.get("/data", (req, res) => {
 })
 
 
-// partners route
-app.get("/home", (req, res) => {
-    res.send("Our partners will be here..")
-})
 
 
 // route to landing page
 app.get("/", (req, res) => {
-    res.sendFile("/public/index.html", {root: __dirname})
+    res.sendFile("/public/landing/index.html", {root: __dirname})
 })
-
-
 
 // dynamic route
 app.get("/users/:userName/sucess/:postNumber", (req, res) => {
@@ -41,9 +35,9 @@ app.get("/users/:userName/sucess/:postNumber", (req, res) => {
     res.send(`Username: ${userName}. Post number: ${postNumber}`)
 })
 
-
+//404 route
 app.use((req, res, next) =>{
-    res.status(404).sendFile('/public/404.html', {root: __dirname})
+    res.status(404).sendFile('/public/landing/404.html', {root: __dirname})
 })
 
 app.listen(PORT, () => 
