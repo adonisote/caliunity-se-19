@@ -1,6 +1,5 @@
 #ignore node folder
 node_modules
 
-
 #ignore automatic mac files
 .DS_Store

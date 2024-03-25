@@ -21,12 +21,13 @@ app.get("/data", (req, res) => {
 })
 
 
-
+const homepage =  (req, res) => {
+    res.sendFile("/public/pages/index.html", {root: __dirname})
+}
 
 // route to landing page
-app.get("/", (req, res) => {
-    res.sendFile("/public/landing/index.html", {root: __dirname})
-})
+app.get("/", homepage)
+app.get("/home", homepage)
 
 // dynamic route
 app.get("/users/:userName/sucess/:postNumber", (req, res) => {
