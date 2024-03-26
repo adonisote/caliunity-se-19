@@ -33,24 +33,21 @@
         <meta property="og:title" content="Biggest Calisthenics Community" />
         <link rel="icon" href="/favicon.png" type="image/x-icon" />
         <script src="/scripts/script.js" defer></script>
+        <script src="/scripts/landing.js" defer></script>
 
-        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="../styles/style.css" />
     </head>
     <body>
         <header>
-            <h1>Caliunity</h1>
-            <img
-                src="https://drive.google.com/thumbnail?id=1MqsgEQspq1brPO4QkzcKe1mSPmZSkJ_g"
-                alt="Caliunity Logo"
-            />
+            <!-- <h1>Caliunity</h1>
             <p>
-                A community of athletes that know that better results come when
+                A community of athletes that know that best results come when
                 joining forces.
-            </p>
+            </p> -->
         </header>
 
         <main>
-            <nav>
+            <!-- <nav>
                 <a href="#why">
                     <button class="navb">Why?</button>
                 </a>
@@ -60,8 +57,92 @@
                 <a href="/landing/about.html">
                     <button class="navb">Who?</button>
                 </a>
-            </nav>
+            </nav> -->
+            <section class="pitch">
+                <h1>The Real Strength Is In Our Community.</h1>
+                <p>Join a worldwide network of calisthencis enthusiasts.</p>
+                <img src="images/deco/helping-hand/helping-hand.svg" alt="" />
+                <div class="button-set">
+                    <div class="split left">
+                        
+                        <!-- <div class="centered"> -->
+                            <button 
+                            class="centered"
+                            onclick="location.href='#features'" type="button">
+                                Explore features
+                            </button>
+    
+                        <!-- </div> -->
+                    </div>
+                    <div class="split right">
 
+                        <!-- <div class="centered"> -->
+                            <button
+                            class="centered"
+                            onclick="location.href='/landing/register/register.html'"
+                            type="button"
+                            >
+                            Get started
+                            </button>
+    
+                        <!-- </div> -->
+
+                    </div>
+
+                </div>
+                
+            </section>
+            <section class="features">
+                <div class="slideshow-container">
+                    <!-- Features -->
+                    <div id="f_track" class="mySlides fade">
+                        <h5>Track Progress</h5>
+                        <p>
+                            Your achievements, effortlessly captured in your
+                            profile
+                        </p>
+                        <img
+                            class="phone"
+                            src="/images/landing/iPhone-Screenshot.svg"
+                            alt=""
+                        />
+                    </div>
+                    <div id="f_connect" class="mySlides fade">
+                        <h5>Connect & Grow</h5>
+                        <p>
+                            Engage, share advice, and learn from fellow members
+                        </p>
+                        <img
+                            class="phone"    
+                            src="/images/landing/iPhone-Screenshot.svg"
+                            alt=""
+                        />
+                    </div>
+                    <div id="f_events" class="mySlides fade">
+                        <h5>Events & Competitions</h5>
+                        <p>
+                            Join or host, and celebrate the joy of calisthenics
+                        </p>
+                        <img
+                            class="phone"
+                            src="/images/landing/iPhone-Screenshot.svg"
+                            alt=""
+                        />
+                    </div>
+
+                    <!-- Next and previos arrows -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                    
+                    <a class="next" onclick="plusSlides(1)">&#10095</a> 
+
+                    <!-- The dots -->
+                    <div style="text-align: center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </section>
             <blockquote>
                 In the heart of every motion, every push, and every pull, lies
                 the strength of CaliUnity. Where every challenge is met with a
@@ -188,14 +269,18 @@
                         width="100%"
                     />
                 </picture>
-                <a href="app/index.html">
-                    <button type="button">Register</button>
-                </a>
+                <button onclick="location.href='app/index.html'" type="button">
+                    Register
+                </button>
             </section>
         </main>
 
         <footer>
-            <p>©Copyright 2024 by Caliunity. All rights reversed.</p>
+            <p>
+                <small>
+                    ©Copyright 2024 by Caliunity. All rights reversed.
+                </small>
+            </p>
             <ul>
                 <li><a href="landing/about.html">About us</a></li>
                 <li><a href="landing/imprint.html">Imprint</a></li>
@@ -204,3 +289,6 @@
         </footer>
     </body>
 </html>
+
+<!-- Questions -->
+<!-- Why do i need to specify the location as if I were in public -->

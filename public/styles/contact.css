@@ -62,14 +62,6 @@
       url(../font/geist-sans/Geist-UltraBlack.woff2) format("woff2")
 }
 
-/* @font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 200;
-    src:
-      local("Geist"),
-      url(../font/geist-sans/Geist-UltraLight.woff2) format("woff")
-} */
 
 
 body {

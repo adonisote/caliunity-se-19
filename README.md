@@ -4,28 +4,19 @@
 
 ### Main pages
 
-Landing page: public/index.html
+Landing page: pages/index.html
 WebApp: public/app/index.html
 
-# Colaborative Coding
+# Main Feautures
 
-### Before you work:
+1. Track your progress
+2. Connect & Ask for advice
+3. Create and Manage Calisthenics Events
 
-Pull
+# Run locally
 
-### While Working:
+Install dependencies:
+`npm install`
 
--   After every 20 lines of code or something working -> commit
-
-## When you finished working (daily)
-
--   PUSH if you are confident of you changes on you feature
--   Create a pull request, if you are modifying the feauture of others. Inform the responsables so that they can merge the code
-
-[How to Use Git and GitHub in a Team like a Pro](https://www.freecodecamp.org/news/how-to-use-git-and-github-in-a-team-like-a-pro/)
-
-[Create pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-
-Some resources:
-
-[HTML Elements](https://www.w3schools.com/html/default.asp)
+Run project:
+`npm run dev`
