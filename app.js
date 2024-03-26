@@ -48,12 +48,6 @@ app.get('/cookies', (req, res) => {
 })
 
 
-//advice search route
-
-app.get("/advice", (req, res) => {
-    console.log(req.query)
-    res.send("We are looking in our database. We will get back to you soon.")
-})
 
 //contact form
 app.post("/contact", (req, res) => {
@@ -62,6 +56,13 @@ app.post("/contact", (req, res) => {
     // res.sendFile("public/pages/contact.html", {root: __dirname})
 })
 
+////APP Routes
+//advice search route
+
+app.get("/advice", (req, res) => {
+    const searchAdvice = req.query
+    res.send(`You searched for: ${searchAdvice}. We are looking in our database. We will get back to you soon...`)
+})
 
 
 //404 route -> It has to bee after the root definitions (at the end). Otherwsie conflict. 
