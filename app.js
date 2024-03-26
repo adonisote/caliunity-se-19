@@ -142,10 +142,7 @@ const users = [
 app.get("/api/v1/users", (req, res) => {
     res.json(users)
 })
-
-
-
-
+//api user slug root
 app.get("/api/v1/users/:name", (req, res) => {
     const userName = req.params.name
 
