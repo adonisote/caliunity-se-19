@@ -15,11 +15,10 @@ app.use(express.urlencoded({extended: true}))
 
 
 
-// 404 response
 const __filename = fileURLToPath(import.meta.url) // get the resolved path to the file
 const __dirname = path.dirname(__filename) // get the name of the directory
 
-
+//send data from backend to frontend
 app.get("/data", (req, res) => {
     res.send(`${dataJson.id}`)
 })
@@ -31,22 +30,73 @@ const homepage =  (req, res) => {
 app.get("/", homepage)
 app.get("/home", homepage)
 
-// dynamic route
+// dynamic root
 app.get("/users/:userName/sucess/:postNumber", (req, res) => {
     const userName = req.params.userName
     const postNumber = req.params.postNumber
     res.send(`Username: ${userName}. Post number: ${postNumber}`)
 })
 
+//contact page root
+app.get("/contact", (req, res) => {
+    res.sendFile("/public/pages/contact.html", {root: __dirname})
+})
 
+//about root
+app.get("/about", (req, res) => {
+    res.sendFile("/public/pages/about.html", {root: __dirname})
+})
 
-
+////////Web Dev Tutorials
 //query strings
 app.get('/cookies', (req, res) => {
     console.log(req.query)
-    res.send('Here ')
+    res.send(`
+    <h1>Cookies</h1>
+    <p>Cooking incoming...!</p>
+    <h2>Ingredients:</h2>
+    <ul>
+    <li>Egs</li>
+    </ul>
+    `
+    )
+})
+//send a json file to the backend
+app.get('/api/v1/cookies', (req, res) => {
+    res.json({
+        cookies: [
+            {name: 'Chochochip', price: 3.50},
+            { name: 'Banana', price: 3.00 }
+        ]
+    }
+    )
 })
 
+//respond with a file download
+
+app.get('/file/:name', (req, res, next) => {
+    const options = {
+      root: path.join(__dirname, 'public'),
+      dotfiles: 'deny',
+      headers: {
+        'x-timestamp': Date.now(),
+        'x-sent': true,
+        'Content-Disposition': `attachment; filename=${req.params.name}` //force download
+      }
+    }
+  
+    const fileName = req.params.name
+    res.sendFile(fileName, options, (err) => {
+      if (err) {
+        next(err)
+      } else {
+        console.log('Sent:', fileName)
+      }
+    })
+  })
+
+//////////////////////////////
+//////////////////////////////
 
 
 //contact form
@@ -78,6 +128,37 @@ app.post("/newlog", (req,res)=>{
         Phase: ${workoutPhase}. 
         To do: ${exerciseReps} ${exerciseName}s.  `)
 })
+
+//users list with user objects
+const users = [
+    {name: 'jan', exp: 'beginner', postsTotal: 17, posts: [
+        {postId: 1, title: "How to master motivation", message: "I want to go more often...."}
+    ]},
+    {name: 'fernand', exp: 'pro', postTotal: 7},
+    {name: 'nikita', exp: 'intermediate', postTotal: 10}
+]
+
+//api root for users
+app.get("/api/v1/users", (req, res) => {
+    res.json(users)
+})
+
+
+
+
+app.get("/api/v1/users/:name", (req, res) => {
+    const userName = req.params.name
+
+    const userDisplay = users.find((user)=> user['name'] === userName)
+    console.log(userDisplay)
+
+    if (userDisplay) {
+        res.json(userDisplay)
+    } else {
+        res.status(404).sendFile('public/pages/404.html', {root: __dirname})
+    }
+})
+
 
 
 //404 route -> It has to bee after the root definitions (at the end). Otherwsie conflict. 
