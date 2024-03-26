@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 100;
+    src:
+      url(../font/geist-sans/Geist-Thin.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 200;
+    src:
+      url(../font/geist-sans/Geist-UltraLight.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 300;
+    src:
+      url(../font/geist-sans/Geist-Light.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 400;
+    src:
+      url(../font/geist-sans/Geist-Regular.ttf) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 500;
+    src:
+      url(../font/geist-sans/Geist-Medium.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 600;
+    src:
+      url(../font/geist-sans/Geist-SemiBold.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 700;
+    src:
+      url(../font/geist-sans/Geist-Bold.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 800;
+    src:
+      url(../font/geist-sans/Geist-Black.woff2) format("woff2")
+}
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 900;
+    src:
+      url(../font/geist-sans/Geist-UltraBlack.woff2) format("woff2")
+}
+
+html {
+    font-family: Geist, sans-serif;
+    font-size: 16px;
+    background-color: rgba(60, 60, 71, 1);
+  
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(252, 252, 253, 1);
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+
+}
