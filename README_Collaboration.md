@@ -20,3 +20,7 @@ Pull
 Some resources:
 
 [HTML Elements](https://www.w3schools.com/html/default.asp)
+
+#Improvement ideas
+
+1. Add subdomain routing for APP
