@@ -52,7 +52,7 @@ app.get('/cookies', (req, res) => {
 //contact form
 app.post("/contact", (req, res) => {
     console.log('Contact form submission: ', req.body)
-    res.send('Thank you for message. We will be in touch soon.')
+    res.send(`Thank you for message. We will be in touch soon. This is your message:"${req.body.user_message}" `)
     // res.sendFile("public/pages/contact.html", {root: __dirname})
 })
 
@@ -63,6 +63,20 @@ app.get("/advice", (req, res) => {
     const searchAdvice = req.query.search
     console.log(searchAdvice)
     res.send(`You searched for: "${searchAdvice}". We are looking in our database. We will get back to you soon...`)
+})
+
+//create training plan
+
+app.post("/newlog", (req,res)=>{
+    let workoutType = req.body.type
+    let workoutPhase = req.body.phase
+    let exerciseName = req.body.exName
+    let exerciseReps = req.body.exReps
+    console.log(req.body)
+    res.send(`Sucessully created a workout.
+        Type:${workoutType}.
+        Phase: ${workoutPhase}. 
+        To do: ${exerciseReps} ${exerciseName}s.  `)
 })
 
 
