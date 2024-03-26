@@ -224,17 +224,13 @@ img {
 
 
 
-
-@media (min-width: 480px) {
-  body {
-    background-color: red;
-  }
-}
-
+/* We will update this breaking point in the future. 
 @media (min-width:640px) {
-  
-}
+} */
 
+/* We are going to add or second break point for desktop version */
 @media (min-width:1008px) {
   
 }
+
+
