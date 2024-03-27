@@ -121,7 +121,8 @@ app.get("/app", (req, res) => {
 
 //sucess view
 app.get("/app/sucess", (req, res) => {
-    res.render('sucess/index')
+    const heading = '<h1>Achievements</h1>'
+    res.render('sucess/index', {heading: heading})
 })
 
 
