@@ -109,7 +109,7 @@ app.get('/file/:name', (req, res, next) => {
 
 
 ////APP Routes
-//profile page using EJS Template
+//profile view using EJS Template
 app.get("/app", (req, res) => {
     const numberOfTraining = 17
     res.render('index', {
@@ -119,6 +119,10 @@ app.get("/app", (req, res) => {
         nameOfBrand: "Caliunity"})
 })
 
+//sucess view
+app.get("/app/sucess", (req, res) => {
+    res.render('sucess/index')
+})
 
 
 
