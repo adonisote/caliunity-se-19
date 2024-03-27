@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Profile</title>
+    </head>
+    <body>
+        <header>
+            <h1>Profile</h1>
+            <nav>
+                <a href="/">Home</a>&nbsp;|&nbsp;
+                <a href="/about">About</a>&nbsp;|&nbsp;
+                <a href="/contact">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <h4>Trainings:</h4>
+                <p><%= numberOfTraining %></p>
+            </div>
+            <div>
+                <h4>Post:</h4>
+                <p><%= numberOfPost %></p>
+            </div>
+            <div>
+                <h4>Skills:</h4>
+                <p><%= numberOfSkill %></p>
+            </div>
+        </main>
+        <footer>
+            <p>&copy;<%= nameOfBrand %>. Since: 2024</p>
+            <p>Made with ❤️ by us</p>
+        </footer>
+    </body>
+</html>

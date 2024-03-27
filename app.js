@@ -7,9 +7,10 @@ import dataJson from "./data.json" assert {type: "json"}
 
 const app = express()
 const PORT = 3005
+app.set('view engine', 'ejs')
 
 //Middlewares
-app.use('/',express.static('public')) // serve static assests & add virtual path so that public is not being shown in the route
+// app.use('/',express.static('public')) // serve static assests & add virtual path so that public is not being shown in the route
 app.use(logger) // logger middleware
 app.use(express.urlencoded({extended: true}))
 
@@ -40,6 +41,13 @@ app.get("/users/:userName/sucess/:postNumber", (req, res) => {
 //contact page root
 app.get("/contact", (req, res) => {
     res.sendFile("/public/pages/contact.html", {root: __dirname})
+})
+
+//contact form post root
+app.post("/contact", (req, res) => {
+    console.log('Contact form submission: ', req.body)
+    res.send(`Thank you for message. We will be in touch soon. This is your message:"${req.body.user_message}" `)
+    // res.sendFile("public/pages/contact.html", {root: __dirname})
 })
 
 //about root
@@ -99,14 +107,21 @@ app.get('/file/:name', (req, res, next) => {
 //////////////////////////////
 
 
-//contact form
-app.post("/contact", (req, res) => {
-    console.log('Contact form submission: ', req.body)
-    res.send(`Thank you for message. We will be in touch soon. This is your message:"${req.body.user_message}" `)
-    // res.sendFile("public/pages/contact.html", {root: __dirname})
-})
 
 ////APP Routes
+//profile page using EJS Template
+app.get("/app", (req, res) => {
+    const numberOfTraining = 17
+    res.render('index', {
+        numberOfTraining: numberOfTraining,
+        numberOfPost: 20,
+        numberOfSkill: 5, 
+        nameOfBrand: "Caliunity"})
+})
+
+
+
+
 //advice search route
 
 app.get("/advice", (req, res) => {
