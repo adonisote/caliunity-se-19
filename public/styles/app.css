@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 100;
+    src:
+      url(../font/geist-sans/Geist-Thin.woff2) format("woff2")
+  }
+  @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 200;
+    src:
+      url(../font/geist-sans/Geist-UltraLight.woff2) format("woff2")
+  }
+  @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 300;
+    src:
+      url(../font/geist-sans/Geist-Light.woff2) format("woff2")
+  }
+  @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 400;
+    src:
+      url(../font/geist-sans/Geist-Regular.ttf) format("woff2")
+  }
+  @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 500;
+    src:
+      url(../font/geist-sans/Geist-Medium.woff2) format("woff2")
+  }
+  @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 600;
+    src:
+      url(../font/geist-sans/Geist-SemiBold.woff2) format("woff2")
+  }
+  @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 700;
+    src:
+      url(../font/geist-sans/Geist-Bold.woff2) format("woff2")
+  }
+  @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 800;
+    src:
+      url(../font/geist-sans/Geist-Black.woff2) format("woff2")
+  }
+  @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 900;
+    src:
+      url(../font/geist-sans/Geist-UltraBlack.woff2) format("woff2")
+  }
+  
+  html {
+    font-family: Geist, sans-serif;
+    font-size: 16px;
+  
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {line-height: 1.6;}
+  h1 {font-size: 2.986rem;}
+  h2 {font-size: 2.488rem;}
+  h3 {font-size: 2.074rem;}
+  h4 {font-size: 1.728rem;}
+  h5 {font-size: 1.44rem;}
+  h6 {font-size: 1.2rem;}
+  p {font-size: 1rem;}
+  small {font-size: 0.833rem;}
+  h1, h2, h3,h4,h5,h6 {line-height: 1.15;}
+  
+  img {
+    width: 100%;
+  }
+
+  
