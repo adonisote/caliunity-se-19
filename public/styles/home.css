@@ -196,6 +196,7 @@ li a:hover {
     display: flex;
     justify-content: space-around;
     padding: 1em;
+    flex-wrap: wrap;
 }
 
 .left-button {
@@ -203,7 +204,7 @@ li a:hover {
     background-color: rgba(27, 135, 250, 1);
     color: rgba(252, 252, 253, 1);
     border-radius: 1em;
-    
+    margin: 1em;
 }
 
 .right-button {
@@ -211,6 +212,7 @@ li a:hover {
     background-color: rgba(27, 135, 250, 1);
     color: rgba(252, 252, 253, 1);
     border-radius: 1em;
+    margin: 1em;
 }
 
 /* 
