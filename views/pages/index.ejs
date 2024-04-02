@@ -37,6 +37,16 @@
         <link rel="stylesheet" href="/public/styles/home.css" />
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </header>
         <main>
             <!-- <h1>Caliunity</h1>
             <p>
@@ -47,36 +57,27 @@
             <section class="pitch">
                 <h1>The Real Strength Is In Our Community.</h1>
                 <p>Join a worldwide network of calisthencis enthusiasts.</p>
+
+                <!-- <img
+                    src="/public/images/deco/helping-hand/helping-hand.svg"
+                    alt=""
+                /> -->
+                <blockquote class="quoute-pitch">
+                    In the heart of every motion, every push, and every pull,
+                    lies the strength of CaliUnity. Where every challenge is met
+                    with a helping hand, every achievement is a shared joy. Join
+                    us, and be part of a community where we rise by lifting
+                    others. Caliunity – Strength in Unity.
+                </blockquote>
+                <div class="button-container">
+                    <button class="left-button">Explore Features</button>
+                    <button class="right-button">Get started</button>
+                </div>
+
                 <img
                     src="/public/images/deco/helping-hand/helping-hand.svg"
                     alt=""
                 />
-                <div class="button-set">
-                    <div class="split left">
-                        <!-- <div class="centered"> -->
-                        <button
-                            class="centered"
-                            onclick="location.href='#features'"
-                            type="button"
-                        >
-                            Explore features
-                        </button>
-
-                        <!-- </div> -->
-                    </div>
-                    <div class="split right">
-                        <!-- <div class="centered"> -->
-                        <button
-                            class="centered"
-                            onclick="location.href='/landing/register/register.html'"
-                            type="button"
-                        >
-                            Get started
-                        </button>
-
-                        <!-- </div> -->
-                    </div>
-                </div>
             </section>
             <section class="features">
                 <div class="slideshow-container">
@@ -87,9 +88,10 @@
                             Your achievements, effortlessly captured in your
                             profile
                         </p>
+
                         <img
                             class="phone"
-                            src="/images/landing/iPhone-Screenshot.svg"
+                            src="/public/images/landing/iPhone-Screenshot.svg"
                             alt=""
                         />
                     </div>
@@ -100,7 +102,7 @@
                         </p>
                         <img
                             class="phone"
-                            src="/images/landing/iPhone-Screenshot.svg"
+                            src="/public/images/landing/iPhone-Screenshot.svg"
                             alt=""
                         />
                     </div>
@@ -111,7 +113,7 @@
                         </p>
                         <img
                             class="phone"
-                            src="/images/landing/iPhone-Screenshot.svg"
+                            src="/public/images/landing/iPhone-Screenshot.svg"
                             alt=""
                         />
                     </div>
@@ -129,149 +131,123 @@
                     </div>
                 </div>
             </section>
-            <blockquote>
-                In the heart of every motion, every push, and every pull, lies
-                the strength of CaliUnity. Where every challenge is met with a
-                helping hand, every achievement is a shared joy. Join us, and be
-                part of a community where we rise by lifting others. CaliUnity –
-                Strength in Unity.
-            </blockquote>
-
-            <blockquote
-                cite="https://news.harvard.edu/gazette/story/2021/01/daniel-lieberman-busts-exercising-myths/"
-            >
-                “We evolved to be physically active when it was necessary or
-                socially rewarding” (Siliezar, 2021).
-            </blockquote>
-
-            <hr />
             <section class="story">
-                <h2 id="story">The story</h2>
-                <figure>
-                    <img
-                        src="images/landing/push-bar-group.jpeg"
-                        width="300"
-                        alt="First calisthencis meetup"
-                    />
-                    <figcaption>First caliunity meetup</figcaption>
-                </figure>
+                <div class="flex-container">
+                    <div class="vertical-centered">
+                        <!-- <div class="story-title"> -->
+                        <h5>Our Story</h5>
+
+                        <!-- </div> -->
+                        <p>
+                            Born from a need for consistency and community in
+                            our fitness journeys, Caliunity is more than an
+                            app—it's a global family dedicated to the strength
+                            and growth of every member.
+                        </p>
+                        <div class="partners">
+                            <h5>Our Valued Partners</h5>
+
+                            <img
+                                src="/public/images/logos/Logo_CODE.svg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="join-us">
+                <h1>Join Us</h1>
                 <p>
-                    &quot;I&quot; started with calisthenics because I wanted to
-                    train something else different to the gym <br />
-                    Since the very begining of
-                </p>
-                <p>
-                    I loved it since the first day, I notice the rapid
-                    improvement
-                </p>
-                <p>
-                    Sadly, I got stuck very fast as well. Not being able to
-                    progress is very demotivating and abandond calisthenics for
-                    a while.
-                </p>
-                <p>
-                    For my luck, a friend of mine started organizing group
-                    workouts. Here is where I learnt that the real strength is
-                    not in the dicipline and the own effort, but in having
-                    people who motivate you in the most challanging moments of
-                    calisthenics.
-                </p>
-                <p>
-                    I overcome the pitfall by joining group workouts and asking
-                    for help. I was lucky enough to be sorrounded with people
-                    who where very supportive. I just wished that I had this
-                    environment since the begining of my fitness journey.
-                </p>
-                <p>
-                    That is how caliunity came to life. It should be a place for
-                    community learning and support in any kind
+                    Whether you're starting or mastering calisthenics, find your
+                    strength in our community.
                 </p>
 
-                <p>
-                    Nowdays, we tried to convert the &quot;I&quot; into
-                    &quot;We&quot;.
-                </p>
-                <p>
-                    This is our most important value: <br />
-                    We &gt; I <br />
-                    <code>
-                        if (Me === 'desperated') { console.log('Ask for help in
-                        the community') } else if (Me === 'demotivated') {
-                        console.log(Join community events & challanges) }
-                    </code>
-                </p>
+                <div class="slideshow-text">
+                    <blockquote
+                        cite="https://news.harvard.edu/gazette/story/2021/01/daniel-lieberman-busts-exercising-myths/"
+                    >
+                        “We evolved to be physically active when it was
+                        necessary or socially rewarding” (Siliezar, 2021).
+                    </blockquote>
+                    <blockquote
+                        cite="https://fitness.edu.au/the-fitness-zone/harnessing-the-power-of-together-group-exercise-for-motivation-accountability-and-social-support/"
+                    >
+                        <p>
+                            When exercising alone, many people struggle to keep
+                            to their exercise program” (Hick, 2023).
+                        </p>
+                    </blockquote>
 
-                <p>
-                    Help each other, workout together, and most important have
-                    fun!
-                </p>
+                    <p>
+                        Stay on track by <del>trying hard</del>
+                        <ins>helping each other</ins>. 💪
+                    </p>
+                    <p>
+                        Help each other, workout together, and most importantly
+                        have fun!
+                    </p>
+                </div>
+
+                <button class="button" type="button">Get started</button>
             </section>
 
             <hr />
+            <section class="foot">
+                <img
+                    src="/public/images/landing/caliunity.webp"
+                    alt="AI generated caliunity meetup"
+                    width="100%"
+                />
 
-            <section>
-                <h2 id="why">Why should I care?</h2>
-
-                <blockquote
-                    cite="https://fitness.edu.au/the-fitness-zone/harnessing-the-power-of-together-group-exercise-for-motivation-accountability-and-social-support/"
-                >
-                    <p>
-                        When exercising alone, many people struggle to keep to
-                        their exercise program” (Hick, 2023).
-                    </p>
-                </blockquote>
-
-                <p>
-                    Stay on track by <del>trying hard</del>
-                    <ins>helping each other</ins>. 💪
-                </p>
-
-                <p>
-                    Follow our proved concept
-                    <abbr title="Come Up with a Nice acronym">Acronym</abbr>
-
-                    to achieve faster and long term improvements
-                </p>
-                <ul>
-                    <li>Join the community</li>
-                    <li>Track your Journey</li>
-                    <li>Ask for help</li>
-                    <li>Participate in events</li>
-                </ul>
-            </section>
-            <section>
-                <picture>
-                    <source
-                        media="(max-width:799px)"
-                        srcset="images/landing/caliunity-600px.jpg"
-                    />
-                    <source
-                        media="(min-width:800px)"
-                        srcset="images/landing/caliunity.webp"
-                    />
-                    <img
-                        src="images/landing/caliunity.webp"
-                        alt=""
-                        width="100%"
-                    />
-                </picture>
-                <button onclick="location.href='app/index.html'" type="button">
-                    Register
-                </button>
-            </section>
-        </main>
-
-        <footer>
-            <p>
+                <footer class="footer">
+                    <div class="footer-part">
+                        <p>Resources</p>
+                        <small>Academy</small>
+                        <small>Community</small>
+                        <small>Blog</small>
+                    </div>
+                    <div class="footer-part">
+                        <p>Community</p>
+                        <small>About us</small>
+                        <small>Vountering</small>
+                        <small>Become a partner</small>
+                    </div>
+                    <div class="footer-part">
+                        <p>Legal</p>
+                        <small>Cookie Policies</small>
+                        <small>Privacy</small>
+                        <small>Imprint</small>
+                        <small>Terms & Conditions</small>
+                    </div>
+                    <div class="footer-part">
+                        <p>Follow us</p>
+                        <div class="logo-container">
+                            <img
+                                src="/public/images/logos/white/instagram.svg"
+                                alt=""
+                            />
+                            <small>Instagram</small>
+                        </div>
+                        <div class="logo-container">
+                            <img
+                                src="/public/images/logos/white/facebook.svg"
+                                alt=""
+                            />
+                            <small> Facebook</small>
+                        </div>
+                        <div class="logo-container">
+                            <img
+                                src="/public/images/logos/white/linkedin.svg"
+                                alt=""
+                            />
+                            <small> LinkedIn</small>
+                        </div>
+                    </div>
+                </footer>
                 <small>
                     ©Copyright 2024 by Caliunity. All rights reversed.
                 </small>
-            </p>
-            <ul>
-                <li><a href="landing/about.html">About us</a></li>
-                <li><a href="landing/imprint.html">Imprint</a></li>
-                <li><a href="landing/contact.html">Contact us</a></li>
-            </ul>
-        </footer>
+            </section>
+        </main>
     </body>
 </html>
