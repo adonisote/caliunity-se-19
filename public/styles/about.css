@@ -1,0 +1,23 @@
+p {
+    padding: 1em;
+}
+
+h1 {
+    margin: 1rem;
+}
+img {
+    border-radius: 1em;
+    border: .5em solid rgba(255, 222, 133, 1);
+}
+figure {
+    margin: 1em;
+}
+
+figcaption {
+    text-align: left;
+}
+
+body {
+    background-color: rgba(255, 205, 199, 1)
+
+}

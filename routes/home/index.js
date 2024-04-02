@@ -10,4 +10,8 @@ const landingPage = (req, res) => {
 homeRouter.get('/', landingPage)
 homeRouter.get('/home', landingPage)
 
+homeRouter.get('/about', (req, res) => {
+    res.render('pages/about')
+})
+
 export default homeRouter
