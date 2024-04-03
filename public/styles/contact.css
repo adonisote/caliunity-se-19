@@ -1,133 +1,55 @@
-@font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 100;
-    src:
-      url(../font/geist-sans/Geist-Thin.woff2) format("woff2")
-}
-@font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 200;
-    src:
-      url(../font/geist-sans/Geist-UltraLight.woff2) format("woff2")
-}
-@font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 300;
-    src:
-      url(../font/geist-sans/Geist-Light.woff2) format("woff2")
-}
-@font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 400;
-    src:
-      url(../font/geist-sans/Geist-Regular.ttf) format("woff2")
-}
-@font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 500;
-    src:
-      url(../font/geist-sans/Geist-Medium.woff2) format("woff2")
-}
-@font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 600;
-    src:
-      url(../font/geist-sans/Geist-SemiBold.woff2) format("woff2")
-}
-@font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 700;
-    src:
-      url(../font/geist-sans/Geist-Bold.woff2) format("woff2")
-}
-@font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 800;
-    src:
-      url(../font/geist-sans/Geist-Black.woff2) format("woff2")
-}
-@font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 900;
-    src:
-      url(../font/geist-sans/Geist-UltraBlack.woff2) format("woff2")
+
+.contact-us {
+    background-color: rgba(60, 60, 71, 1);
+    border-radius:  2em 2em 0% 0%;
+    /* position: relative; */
+    height: calc(72vh);
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    padding: 2em 1em;
 }
 
-
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-body, 
-input,
-textarea,
-button {
-    font-family: Geist, sans-serif;
-}
-
-.join-us {
-    background-color: #FE9B90;
-    text-align: center;
-    margin: 102px 0px 0px 0px;
-    padding: 0px;
-    border: 1px solid #ccc;
-    border-radius:  32px 32px 0% 0%;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    
-
+form {
+    height: 100%;
 }
 
 
 h1 {
-    color: #FCFCFD;
-    font-size: 47px ;
-    margin: 32px 0px 0px 0px;
-    padding: 0;
-    line-height: 115%;
-    font-weight: 800;
+    color: rgba(252, 252, 253, 1);
 }
 
 input {
     width: calc(100% - 16px);
-    height: 42px;
-    box-sizing: border-box;
-    border-radius: 8px;
+    height: 2.5em;
+    border-radius: 1em;
+    text-align: center;
+    color: rgba(60, 60, 71, 1);
 }
+
 input::placeholder,
 textarea::placeholder {
-    color: #9D9DA3;
+    color: rgba(157, 157, 163, 1);
     text-align: center;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+input:hover,
+textarea:hover {
     outline-style: solid;
-    outline-color: #8C81F7;
-    border-color: #8C81F7;
+    outline-color: rgba(140, 129, 247, 1);
+    border-color: rgba(140, 129, 247, 1);
 
 }
 
 textarea {
-    width: calc(100% - 16px);
-    height: 168px;
+    width: calc(100% - 1em);
     resize: none;
-    box-sizing: border-box;
-    border-radius: 8px;
-
+    border-radius: 2em;
+    text-align: center;
+    color: rgba(60, 60, 71, 1);
 }
 
 label {
@@ -153,9 +75,37 @@ button {
     border-radius: 8px;
 }
 
-button:hover{
-    background-color: #8C81F7;
+
+.button:hover {
+    background-color: rgba(140, 129, 247, 1);
+    outline-style: outset;
+    outline-color: rgba(140, 129, 247, 1);
+    /* border-color: rgba(140, 129, 247, 1); */
 }
-li {
-    margin: 16px 0px;
+
+form li {
+    margin: 1em 0em;
 }
+
+
+
+@media (min-width:640px) {
+    .form-container {
+        display: flex;
+        justify-content: center;
+
+    }
+    .contact-us {
+        width: 50%;
+    
+    }
+}
+
+
+
+
+/* We are going to add or second break point for desktop version */
+@media (min-width:1008px) {
+}
+
+
