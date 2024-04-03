@@ -18,4 +18,9 @@ homeRouter.get('/contact', (req, res) => {
     res.render('pages/contact')
 })
 
+homeRouter.post('/contact', (req, res) => {
+    console.log(req.body)
+    res.send('Thank you for reaching out. Stay Strong!')
+})
+
 export default homeRouter
