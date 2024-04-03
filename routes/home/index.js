@@ -14,4 +14,8 @@ homeRouter.get('/about', (req, res) => {
     res.render('pages/about')
 })
 
+homeRouter.get('/contact', (req, res) => {
+    res.render('pages/contact')
+})
+
 export default homeRouter
