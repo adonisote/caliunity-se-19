@@ -1,5 +1,5 @@
 import express from 'express';
-
+import {logger} from "./middlewares/logger.js"
 
 
 //import Routers
@@ -15,11 +15,20 @@ app.set('view engine', 'ejs')
 //serve public folder
 app.use('/public', express.static('public'))
 
+
+// Middlewares
+app.use(logger) // logger middleware
+app.use(express.urlencoded({ extended: true }))
+
+
+
+
+
 //landing page
 app.use('/', homeRouter)
 
 //training feature
-app.use('/training', trainingRouter)
+app.use('/app/training', trainingRouter)
 
 
 
