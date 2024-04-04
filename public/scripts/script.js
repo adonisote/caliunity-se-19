@@ -1,1 +1,1 @@
-console.log('client side javascript')
+console.log('client side javascript');

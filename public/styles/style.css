@@ -1,93 +1,111 @@
 @font-face {
-  font-family: "Geist";
+  font-family: 'Geist';
   font-style: normal;
   font-weight: 100;
-  src:
-    url(../font/geist-sans/Geist-Thin.woff2) format("woff2")
+  src: url(../font/geist-sans/Geist-Thin.woff2) format('woff2');
 }
 @font-face {
-  font-family: "Geist";
+  font-family: 'Geist';
   font-style: normal;
   font-weight: 200;
-  src:
-    url(../font/geist-sans/Geist-UltraLight.woff2) format("woff2")
+  src: url(../font/geist-sans/Geist-UltraLight.woff2) format('woff2');
 }
 @font-face {
-  font-family: "Geist";
+  font-family: 'Geist';
   font-style: normal;
   font-weight: 300;
-  src:
-    url(../font/geist-sans/Geist-Light.woff2) format("woff2")
+  src: url(../font/geist-sans/Geist-Light.woff2) format('woff2');
 }
 @font-face {
-  font-family: "Geist";
+  font-family: 'Geist';
   font-style: normal;
   font-weight: 400;
-  src:
-    url(../font/geist-sans/Geist-Regular.ttf) format("woff2")
+  src: url(../font/geist-sans/Geist-Regular.ttf) format('woff2');
 }
 @font-face {
-  font-family: "Geist";
+  font-family: 'Geist';
   font-style: normal;
   font-weight: 500;
-  src:
-    url(../font/geist-sans/Geist-Medium.woff2) format("woff2")
+  src: url(../font/geist-sans/Geist-Medium.woff2) format('woff2');
 }
 @font-face {
-  font-family: "Geist";
+  font-family: 'Geist';
   font-style: normal;
   font-weight: 600;
-  src:
-    url(../font/geist-sans/Geist-SemiBold.woff2) format("woff2")
+  src: url(../font/geist-sans/Geist-SemiBold.woff2) format('woff2');
 }
 @font-face {
-  font-family: "Geist";
+  font-family: 'Geist';
   font-style: normal;
   font-weight: 700;
-  src:
-    url(../font/geist-sans/Geist-Bold.woff2) format("woff2")
+  src: url(../font/geist-sans/Geist-Bold.woff2) format('woff2');
 }
 @font-face {
-  font-family: "Geist";
+  font-family: 'Geist';
   font-style: normal;
   font-weight: 800;
-  src:
-    url(../font/geist-sans/Geist-Black.woff2) format("woff2")
+  src: url(../font/geist-sans/Geist-Black.woff2) format('woff2');
 }
 @font-face {
-  font-family: "Geist";
+  font-family: 'Geist';
   font-style: normal;
   font-weight: 900;
-  src:
-    url(../font/geist-sans/Geist-UltraBlack.woff2) format("woff2")
+  src: url(../font/geist-sans/Geist-UltraBlack.woff2) format('woff2');
 }
 
 html {
   font-family: Geist, sans-serif;
   font-size: 16px;
-
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-body {line-height: 1.6;}
-h1 {font-size: 2.986rem;}
-h2 {font-size: 2.488rem;}
-h3 {font-size: 2.074rem;}
-h4 {font-size: 1.728rem;}
-h5 {font-size: 1.44rem;}
-h6 {font-size: 1.2rem;}
-p {font-size: 1rem;}
-small {font-size: 0.833rem;}
-h1, h2, h3,h4,h5,h6 {line-height: 1.15;}
+body {
+  line-height: 1.6;
+}
+h1 {
+  font-size: 2.986rem;
+}
+h2 {
+  font-size: 2.488rem;
+}
+h3 {
+  font-size: 2.074rem;
+}
+h4 {
+  font-size: 1.728rem;
+}
+h5 {
+  font-size: 1.44rem;
+}
+h6 {
+  font-size: 1.2rem;
+}
+p {
+  font-size: 1rem;
+}
+small {
+  font-size: 0.833rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.15;
+}
 
 img {
   width: 100%;
 }
 
-.pitch, .features{
+.pitch,
+.features {
   height: 100vh;
   /* overflow: auto; */
 }
@@ -105,7 +123,7 @@ img {
   z-index: 1;
   /* top: 0; */
   overflow-x: hidden;
-  border: 1px solid green
+  border: 1px solid green;
 }
 
 /* Control the left side */
@@ -133,7 +151,6 @@ img {
   margin: 8%;
 }
 
-
 .phone {
   display: block;
   margin-left: auto;
@@ -145,8 +162,9 @@ img {
   display: none;
 }
 
-.prev, .next {
-  cursor:pointer;
+.prev,
+.next {
+  cursor: pointer;
   position: absolute;
   top: 50%;
   color: white;
@@ -164,7 +182,8 @@ img {
   border-radius: 8px 0 0 8px;
 }
 
-.prev:hover, .next:hover{
+.prev:hover,
+.next:hover {
   background-color: rgba(252, 252, 253, 0.5);
 }
 
@@ -172,14 +191,15 @@ img {
   cursor: pointer;
   height: 1rem;
   width: 1rem;
-  margin: 0 .2rem;
-  background-color: #FDFDFD;
+  margin: 0 0.2rem;
+  background-color: #fdfdfd;
   border: 1px solid rgba(140, 129, 247, 1);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-.active, .dot:hover{
+.active,
+.dot:hover {
   background-color: rgba(140, 129, 247, 1);
 }
 .fade {
@@ -188,8 +208,9 @@ img {
 }
 
 @keyframes fade {
-  from {margin-left: -100%;
-        width: 100%;
+  from {
+    margin-left: -100%;
+    width: 100%;
   }
   to {
     margin-left: 0%;
@@ -198,13 +219,14 @@ img {
 }
 
 #f_track {
-  background-color: #FFDE85;
+  background-color: #ffde85;
 }
-#f_track, #f_connect, #f_events {
-  
+#f_track,
+#f_connect,
+#f_events {
   border-radius: 8%;
   border: 1px solid black;
-  padding: .5em;
+  padding: 0.5em;
   text-align: center;
   height: 100%;
   /* margin: 10%; */
@@ -216,21 +238,16 @@ img {
 }
 
 #f_connect {
-  background-color: #7EE4F0;
+  background-color: #7ee4f0;
 }
 #f_events {
-  background-color: #1B87FA;
+  background-color: #1b87fa;
 }
-
-
 
 /* We will update this breaking point in the future. 
 @media (min-width:640px) {
 } */
 
 /* We are going to add or second break point for desktop version */
-@media (min-width:1008px) {
-  
+@media (min-width: 1008px) {
 }
-
-

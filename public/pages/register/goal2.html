@@ -1,65 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Goal</title>
-    </head>
-    <body>
-        <h1>Goals</h1>
-        <form action="">
-            <p>
-                <label for="strength">Strength</label>
-                <input
-                    type="range"
-                    id="strength"
-                    name="strength"
-                    list="goals"
-                />
-            </p>
-            <p>
-                <label for="endurance">Endurance</label>
-                <input
-                    type="range"
-                    id="endurance"
-                    name="endurance"
-                    list="goals"
-                />
-            </p>
-            <p>
-                <label for="skills">Skills</label>
-                <input type="range" id="skills" name="skills" list="goals" />
-            </p>
-            <p>
-                <label for="other"></label>
-                <input
-                    type="text"
-                    placeholder="Other"
-                    id="other"
-                    name="other"
-                    list="goals"
-                />
-                <label for="otherValue"></label>
-                <input
-                    type="range"
-                    id="otherValue"
-                    name="otherValue"
-                    list="goals"
-                />
-            </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goal</title>
+  </head>
+  <body>
+    <h1>Goals</h1>
+    <form action="">
+      <p>
+        <label for="strength">Strength</label>
+        <input type="range" id="strength" name="strength" list="goals" />
+      </p>
+      <p>
+        <label for="endurance">Endurance</label>
+        <input type="range" id="endurance" name="endurance" list="goals" />
+      </p>
+      <p>
+        <label for="skills">Skills</label>
+        <input type="range" id="skills" name="skills" list="goals" />
+      </p>
+      <p>
+        <label for="other"></label>
+        <input
+          type="text"
+          placeholder="Other"
+          id="other"
+          name="other"
+          list="goals"
+        />
+        <label for="otherValue"></label>
+        <input type="range" id="otherValue" name="otherValue" list="goals" />
+      </p>
 
-            <datalist id="goals">
-                <option value="0" label="0"></option>
-                <option value="25" label="25"></option>
-                <option value="50" label="50"></option>
-                <option value="75" label="75"></option>
-                <option value="100" label="100"></option>
-            </datalist>
-            <section>
-                <p>
-                    <button type="button">Next</button>
-                </p>
-            </section>
-        </form>
-    </body>
+      <datalist id="goals">
+        <option value="0" label="0"></option>
+        <option value="25" label="25"></option>
+        <option value="50" label="50"></option>
+        <option value="75" label="75"></option>
+        <option value="100" label="100"></option>
+      </datalist>
+      <section>
+        <p>
+          <button type="button">Next</button>
+        </p>
+      </section>
+    </form>
+  </body>
 </html>
