@@ -3,8 +3,8 @@ import express from 'express'
 const cookiesRouter = express.Router()
 
 const cookies = [
-    {name:'Double Choc', slug: 'double-choc'},
-    {name:'Chocho Chip', slug: 'choco-chip'}
+    {name:'Double Choc', slug: 'double-choc', isInStock: true},
+    {name:'Chocho Chip', slug: 'choco-chip', isInStock: false}
 ]
 const ingredients = ['flour', 'water', 'eggs', 'salt']
 

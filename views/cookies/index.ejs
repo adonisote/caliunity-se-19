@@ -8,30 +8,44 @@
     </head>
     <body>
         <main>
-            <h1>Our Cookies</h1>
-            <% cooki.forEach(element => { %>
-            <li>
-                <a href="/cookies/<%= element.slug %>"><%= element.name %> </a>
-            </li>
-            <% }) %>
+            <section>
+                <h1>Our Cookies</h1>
+                <% cooki.forEach(element => { %>
+                <li>
+                    <a href="/cookies/<%= element.slug %>"
+                        ><%= element.name %>
+                    </a>
+                </li>
+                <% }) %>
 
-            <!-- General ingredients -->
-            <h2>The general ingredients</h2>
-            <% ingre.forEach(ingredient => { %>
-            <li><%=ingredient%></li>
-            <%}) %>
+                <!-- General ingredients -->
+                <h2>The general ingredients</h2>
+                <% ingre.forEach(ingredient => { %>
+                <li><%=ingredient%></li>
+                <%}) %>
 
-            <!-- Specific ingredients -->
-            <h2>Especific ingredients for each cookie</h2>
-            <p>Each cookie contains:</p>
-            <% cooki.forEach(cookie => { %>
-            <h3><%= cookie.name %></h3>
-            <% ingre.forEach(ingre => { %>
-            <li><%= ingre %></li>
-            <%}) %>
-            <li>*Special ingredients</li>
+                <!-- Specific ingredients -->
+                <h2>Especific ingredients for each cookie</h2>
+                <p>Each cookie contains:</p>
+                <% cooki.forEach(cookie => { %>
+                <h3><%= cookie.name %></h3>
+                <% ingre.forEach(ingre => { %>
+                <li><%= ingre %></li>
+                <%}) %>
+                <li>*Special ingredients</li>
 
-            <%}) %>
+                <%}) %>
+            </section>
+            <section>
+                <h1>In Stock:</h1>
+                <% cooki.forEach(cookie => {%>
+                <li>
+                    <%if (cookie.isInStock) {%>
+                    <a href="/cookies/<%= cookie.slug %>"><%= cookie.name %></a>
+                    <% } else { %> <%= cookie.name %> [SOLD OUT] <% } %>
+                </li>
+                <%}) %>
+            </section>
         </main>
     </body>
 </html>
