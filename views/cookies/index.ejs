@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cookies</title>
   <link rel="stylesheet" href="/public/styles/home.css" />
+  <link rel="stylesheet" href="/public/styles/cookies.css">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
       <% cooki.forEach(cookie => {%>
       <li>
         <%if (cookie.isInStock) {%>
-        <a href="/cookies/<%= cookie.slug %>"><%= cookie.name %></a>
+        <a href="/cookies/<%= cookie.slug %>"><%= cookie.name %>: <%= readablePrice(cookie.priceInCents) %></a>
         <% } else { %> <%= cookie.name %> [SOLD OUT]
         <% } %>
       </li>
