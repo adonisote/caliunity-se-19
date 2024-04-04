@@ -13,232 +13,191 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Caliunity</title>
-        <meta
-            name="description"
-            content="Caliunity is space for calisthenics enthusiasts that strive 
-            to grow using the strenght of community"
-        />
-        <meta
-            property="og:image"
-            content="https://drive.google.com/thumbnail?id=1MqsgEQspq1brPO4QkzcKe1mSPmZSkJ_g"
-        />
-        <meta
-            property="og:description"
-            content="Community of calisthenics enthusiasts. The real strenght is in our community."
-        />
-        <meta property="og:title" content="Biggest Calisthenics Community" />
-        <script src="/public/scripts/landing.js" defer></script>
-        <script src="/public/scripts/script.js" defer></script>
-        <link rel="icon" href="/public/favicon.png" type="image/x-icon" />
-        <link rel="stylesheet" href="/public/styles/home.css" />
-    </head>
-    <body>
-        <header><%- include('../includes/home-nav') %></header>
-        <main>
-            <!-- <h1>Caliunity</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caliunity</title>
+  <meta name="description" content="Caliunity is space for calisthenics enthusiasts that strive 
+            to grow using the strenght of community" />
+  <meta property="og:image" content="https://drive.google.com/thumbnail?id=1MqsgEQspq1brPO4QkzcKe1mSPmZSkJ_g" />
+  <meta property="og:description" content="Community of calisthenics enthusiasts. The real strenght is in our community." />
+  <meta property="og:title" content="Biggest Calisthenics Community" />
+  <script src="/public/scripts/landing.js" defer></script>
+  <script src="/public/scripts/script.js" defer></script>
+  <link rel="icon" href="/public/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/public/styles/home.css" />
+</head>
+
+<body>
+  <header><%- include('../includes/home-nav') %></header>
+  <main>
+    <!-- <h1>Caliunity</h1>
             <p>
                 A community of athletes that know that best results come when
                 joining forces.
             </p> -->
 
-            <section class="pitch">
-                <h1>The Real Strength Is In Our Community.</h1>
-                <p>Join a worldwide network of calisthencis enthusiasts.</p>
+    <section class="pitch">
+      <h1>The Real Strength Is In Our Community.</h1>
+      <p>Join a worldwide network of calisthencis enthusiasts.</p>
 
-                <!-- <img
+      <!-- <img
                     src="/public/images/deco/helping-hand/helping-hand.svg"
                     alt=""
                 /> -->
-                <blockquote class="quoute-pitch">
-                    In the heart of every motion, every push, and every pull,
-                    lies the strength of CaliUnity. Where every challenge is met
-                    with a helping hand, every achievement is a shared joy. Join
-                    us, and be part of a community where we rise by lifting
-                    others. Caliunity – Strength in Unity.
-                </blockquote>
-                <div class="button-container">
-                    <button class="left-button">Explore Features</button>
-                    <button class="right-button">Get started</button>
-                </div>
+      <blockquote class="quoute-pitch">
+        In the heart of every motion, every push, and every pull,
+        lies the strength of CaliUnity. Where every challenge is met
+        with a helping hand, every achievement is a shared joy. Join
+        us, and be part of a community where we rise by lifting
+        others. Caliunity – Strength in Unity.
+      </blockquote>
+      <div class="button-container">
+        <button class="left-button">Explore Features</button>
+        <button class="right-button">Get started</button>
+      </div>
 
-                <img
-                    src="/public/images/deco/helping-hand/helping-hand.svg"
-                    alt=""
-                />
-            </section>
-            <section class="features">
-                <div class="slideshow-container">
-                    <!-- Features -->
-                    <div id="f_track" class="mySlides fade">
-                        <h5>Track Progress</h5>
-                        <p>
-                            Your achievements, effortlessly captured in your
-                            profile
-                        </p>
+      <img src="/public/images/deco/helping-hand/helping-hand.svg" alt="" />
+    </section>
+    <section class="features">
+      <div class="slideshow-container">
+        <!-- Features -->
+        <div id="f_track" class="mySlides fade">
+          <h5>Track Progress</h5>
+          <p>
+            Your achievements, effortlessly captured in your
+            profile
+          </p>
 
-                        <img
-                            class="phone"
-                            src="/public/images/landing/iPhone-Screenshot.svg"
-                            alt=""
-                        />
-                    </div>
-                    <div id="f_connect" class="mySlides fade">
-                        <h5>Connect & Grow</h5>
-                        <p>
-                            Engage, share advice, and learn from fellow members
-                        </p>
-                        <img
-                            class="phone"
-                            src="/public/images/landing/iPhone-Screenshot.svg"
-                            alt=""
-                        />
-                    </div>
-                    <div id="f_events" class="mySlides fade">
-                        <h5>Events & Competitions</h5>
-                        <p>
-                            Join or host, and celebrate the joy of calisthenics
-                        </p>
-                        <img
-                            class="phone"
-                            src="/public/images/landing/iPhone-Screenshot.svg"
-                            alt=""
-                        />
-                    </div>
+          <img class="phone" src="/public/images/landing/iPhone-Screenshot.svg" alt="" />
+        </div>
+        <div id="f_connect" class="mySlides fade">
+          <h5>Connect & Grow</h5>
+          <p>
+            Engage, share advice, and learn from fellow members
+          </p>
+          <img class="phone" src="/public/images/landing/iPhone-Screenshot.svg" alt="" />
+        </div>
+        <div id="f_events" class="mySlides fade">
+          <h5>Events & Competitions</h5>
+          <p>
+            Join or host, and celebrate the joy of calisthenics
+          </p>
+          <img class="phone" src="/public/images/landing/iPhone-Screenshot.svg" alt="" />
+        </div>
 
-                    <!-- Next and previos arrows -->
-                    <a class="prev" onclick="plusSlides(-1)"> &#10094; </a>
+        <!-- Next and previos arrows -->
+        <a class="prev" onclick="plusSlides(-1)"> &#10094; </a>
 
-                    <a class="next" onclick="plusSlides(1)"> &#10095; </a>
+        <a class="next" onclick="plusSlides(1)"> &#10095; </a>
 
-                    <!-- The dots -->
-                    <div style="text-align: center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
-                </div>
-            </section>
-            <section class="story">
-                <div class="flex-container">
-                    <div class="vertical-centered">
-                        <!-- <div class="story-title"> -->
-                        <h5>Our Story</h5>
+        <!-- The dots -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </section>
+    <section class="story">
+      <div class="flex-container">
+        <div class="vertical-centered">
+          <!-- <div class="story-title"> -->
+          <h5>Our Story</h5>
 
-                        <!-- </div> -->
-                        <p>
-                            Born from a need for consistency and community in
-                            our fitness journeys, Caliunity is more than an
-                            app—it's a global family dedicated to the strength
-                            and growth of every member.
-                        </p>
-                        <div class="partners">
-                            <h5>Our Valued Partners</h5>
+          <!-- </div> -->
+          <p>
+            Born from a need for consistency and community in
+            our fitness journeys, Caliunity is more than an
+            app—it's a global family dedicated to the strength
+            and growth of every member.
+          </p>
+          <div class="partners">
+            <h5>Our Valued Partners</h5>
 
-                            <img
-                                src="/public/images/logos/Logo_CODE.svg"
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="join-us">
-                <h1>Join Us</h1>
-                <p>
-                    Whether you're starting or mastering calisthenics, find your
-                    strength in our community.
-                </p>
+            <img src="/public/images/logos/Logo_CODE.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="join-us">
+      <h1>Join Us</h1>
+      <p>
+        Whether you're starting or mastering calisthenics, find your
+        strength in our community.
+      </p>
 
-                <div class="slideshow-text">
-                    <blockquote
-                        cite="https://news.harvard.edu/gazette/story/2021/01/daniel-lieberman-busts-exercising-myths/"
-                    >
-                        “We evolved to be physically active when it was
-                        necessary or socially rewarding” (Siliezar, 2021).
-                    </blockquote>
-                    <blockquote
-                        cite="https://fitness.edu.au/the-fitness-zone/harnessing-the-power-of-together-group-exercise-for-motivation-accountability-and-social-support/"
-                    >
-                        <p>
-                            When exercising alone, many people struggle to keep
-                            to their exercise program” (Hick, 2023).
-                        </p>
-                    </blockquote>
+      <div class="slideshow-text">
+        <blockquote cite="https://news.harvard.edu/gazette/story/2021/01/daniel-lieberman-busts-exercising-myths/">
+          “We evolved to be physically active when it was
+          necessary or socially rewarding” (Siliezar, 2021).
+        </blockquote>
+        <blockquote cite="https://fitness.edu.au/the-fitness-zone/harnessing-the-power-of-together-group-exercise-for-motivation-accountability-and-social-support/">
+          <p>
+            When exercising alone, many people struggle to keep
+            to their exercise program” (Hick, 2023).
+          </p>
+        </blockquote>
 
-                    <p>
-                        Stay on track by <del>trying hard</del>
-                        <ins>helping each other</ins>. 💪
-                    </p>
-                    <p>
-                        Help each other, workout together, and most importantly
-                        have fun!
-                    </p>
-                </div>
+        <p>
+          Stay on track by <del>trying hard</del>
+          <ins>helping each other</ins>. 💪
+        </p>
+        <p>
+          Help each other, workout together, and most importantly
+          have fun!
+        </p>
+      </div>
 
-                <button class="button" type="button">Get started</button>
-            </section>
+      <button class="button" type="button">Get started</button>
+    </section>
 
-            <hr />
-            <section class="foot">
-                <img
-                    src="/public/images/landing/caliunity.webp"
-                    alt="AI generated caliunity meetup"
-                    width="100%"
-                />
+    <hr />
+    <section class="foot">
+      <img src="/public/images/landing/caliunity.webp" alt="AI generated caliunity meetup" width="100%" />
 
-                <footer class="footer">
-                    <div class="footer-part">
-                        <p>Resources</p>
-                        <small>Academy</small>
-                        <small>Community</small>
-                        <small>Blog</small>
-                    </div>
-                    <div class="footer-part">
-                        <p>Community</p>
-                        <small>About us</small>
-                        <small>Vountering</small>
-                        <small>Become a partner</small>
-                    </div>
-                    <div class="footer-part">
-                        <p>Legal</p>
-                        <small>Cookie Policies</small>
-                        <small>Privacy</small>
-                        <small>Imprint</small>
-                        <small>Terms & Conditions</small>
-                    </div>
-                    <div class="footer-part">
-                        <p>Follow us</p>
-                        <div class="logo-container">
-                            <img
-                                src="/public/images/logos/white/instagram.svg"
-                                alt=""
-                            />
-                            <small>Instagram</small>
-                        </div>
-                        <div class="logo-container">
-                            <img
-                                src="/public/images/logos/white/facebook.svg"
-                                alt=""
-                            />
-                            <small> Facebook</small>
-                        </div>
-                        <div class="logo-container">
-                            <img
-                                src="/public/images/logos/white/linkedin.svg"
-                                alt=""
-                            />
-                            <small> LinkedIn</small>
-                        </div>
-                    </div>
-                </footer>
-                <small>
-                    ©Copyright 2024 by Caliunity. All rights reversed.
-                </small>
-            </section>
-        </main>
-    </body>
+      <footer class="footer">
+        <div class="footer-part">
+          <p>Resources</p>
+          <small>Academy</small>
+          <small>Community</small>
+          <small>Blog</small>
+        </div>
+        <div class="footer-part">
+          <p>Community</p>
+          <small>About us</small>
+          <small>Vountering</small>
+          <small>Become a partner</small>
+        </div>
+        <div class="footer-part">
+          <p>Legal</p>
+          <small>Cookie Policies</small>
+          <small>Privacy</small>
+          <small>Imprint</small>
+          <small>Terms & Conditions</small>
+        </div>
+        <div class="footer-part">
+          <p>Follow us</p>
+          <div class="logo-container">
+            <img src="/public/images/logos/white/instagram.svg" alt="" />
+            <small>Instagram</small>
+          </div>
+          <div class="logo-container">
+            <img src="/public/images/logos/white/facebook.svg" alt="" />
+            <small> Facebook</small>
+          </div>
+          <div class="logo-container">
+            <img src="/public/images/logos/white/linkedin.svg" alt="" />
+            <small> LinkedIn</small>
+          </div>
+        </div>
+      </footer>
+      <small>
+        ©Copyright 2024 by Caliunity. All rights reversed.
+      </small>
+    </section>
+  </main>
+</body>
+
 </html>
