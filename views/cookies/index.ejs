@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cookies</title>
+        <link rel="stylesheet" href="/public/styles/home.css" />
+    </head>
+    <body>
+        <main>
+            <h1>Our Cookies</h1>
+            <% cooki.forEach(element => { %>
+            <li>
+                <a href="/cookies/<%= element.slug %>"><%= element.name %> </a>
+            </li>
+            <% }) %>
+
+            <!-- General ingredients -->
+            <h2>The general ingredients</h2>
+            <% ingre.forEach(ingredient => { %>
+            <li><%=ingredient%></li>
+            <%}) %>
+
+            <!-- Specific ingredients -->
+            <h2>Especific ingredients for each cookie</h2>
+            <p>Each cookie contains:</p>
+            <% cooki.forEach(cookie => { %>
+            <h3><%= cookie.name %></h3>
+            <% ingre.forEach(ingre => { %>
+            <li><%= ingre %></li>
+            <%}) %>
+            <li>*Special ingredients</li>
+
+            <%}) %>
+        </main>
+    </body>
+</html>

@@ -5,6 +5,7 @@ import {logger} from "./middlewares/logger.js"
 //import Routers
 import homeRouter from './routes/home/index.js';
 import trainingRouter from './routes/training/index.js';
+import cookiesRouter from './routes/cookies/index.js';
 
 const PORT = 3000;
 const app = express()
@@ -29,6 +30,9 @@ app.use('/', homeRouter)
 
 //training feature
 app.use('/app/training', trainingRouter)
+
+//cookies se-19
+app.use('/cookies', cookiesRouter)
 
 
 
