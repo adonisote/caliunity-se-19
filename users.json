@@ -1,0 +1,118 @@
+[
+  {
+    "userId": "adonisote",
+    "userGoal": "Increase Strength",
+    "userGoalStatus": "In Progress",
+    "userTotalWorkouts": 1,
+    "userPastTrainings": [
+      {
+        "trainingId": "001",
+        "trainingType": "Leg Day",
+        "trainingPhase": "Strength Training",
+        "exercises": [
+          {
+            "exerciseName": "Squat",
+            "exerciseReps": 10,
+            "exerciseSets": 3
+          },
+          {
+            "exerciseName": "Leg Press",
+            "exerciseReps": 12,
+            "exerciseSets": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "Yonas",
+    "userGoal": "Lose Weight",
+    "userGoalStatus": "In Progress",
+    "userTotalWorkouts": 2,
+    "userPastTrainings": [
+      {
+        "trainingId": "001",
+        "trainingType": "Leg Day",
+        "trainingPhase": "Strength Training",
+        "exercises": [
+          {
+            "exerciseName": "Squat",
+            "exerciseReps": 10,
+            "exerciseSets": 3
+          },
+          {
+            "exerciseName": "Leg Press",
+            "exerciseReps": 12,
+            "exerciseSets": 2
+          }
+        ]
+      },
+      {
+        "trainingId": "002",
+        "trainingType": "Cardio",
+        "trainingPhase": "Warm-up",
+        "exercises": [
+          {
+            "exerciseName": "Treadmill Running",
+            "exerciseReps": 0,
+            "exerciseSets": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "Jan",
+    "userGoal": "Improve Flexibility",
+    "userGoalStatus": "In Progress",
+    "userTotalWorkouts": 3,
+    "userPastTrainings": [
+      {
+        "trainingId": "001",
+        "trainingType": "Upper Body",
+        "trainingPhase": "Hypertrophy",
+        "exercises": [
+          {
+            "exerciseName": "Bench Press",
+            "exerciseReps": 8,
+            "exerciseSets": 3
+          },
+          {
+            "exerciseName": "Dumbbell Fly",
+            "exerciseReps": 10,
+            "exerciseSets": 3
+          }
+        ]
+      },
+      {
+        "trainingId": "002",
+        "trainingType": "Cardio",
+        "trainingPhase": "Warm-up",
+        "exercises": [
+          {
+            "exerciseName": "Treadmill Running",
+            "exerciseReps": 0,
+            "exerciseSets": 1
+          }
+        ]
+      },
+      {
+        "trainingId": "003",
+        "trainingType": "Yoga",
+        "trainingPhase": "Stretching",
+        "exercises": [
+          {
+            "exerciseName": "Downward Dog",
+            "exerciseReps": 1,
+            "exerciseSets": 5
+          },
+          {
+            "exerciseName": "Warrior Pose",
+            "exerciseReps": 1,
+            "exerciseSets": 5
+          }
+        ]
+      }
+    ]
+  }
+]

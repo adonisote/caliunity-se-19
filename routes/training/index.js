@@ -1,5 +1,8 @@
 import express from 'express';
 
+//import fake training data
+import trainingData from '../../users.json' assert { type: 'json' }
+
 
 //import helpers
 import { currentDate } from '../../helpers/training.js';
@@ -13,10 +16,27 @@ const trainingRouter = express.Router();
 //specify userId Middleware
 trainingRouter.use("/:userId", userIdMiddleware)
 
-//User dashboard
+//Fake training data dashboard
 trainingRouter.get('/:userId/training/', (req, res) => {
-  res.render('app/training/index', { currentDate: currentDate, userId: req.userId });
-});
+  const user = trainingData.find(user => user.userId.toLocaleLowerCase() == req.userId.toLocaleLowerCase())
+  console.log(user)
+  if (user) {
+    const { userId, userName, userGoal, userGoalStatus, userTotalWorkouts } = user
+    // const userGoal = userName.userGoal
+    // res.json(`${userGoal}`)
+    res.render('app/training/index', {
+      currentDate: currentDate,
+      userId: userId,
+      userGoal: userGoal,
+      userGoalStatus: userGoalStatus,
+      userTotalWorkouts: userTotalWorkouts
+    })
+  } else {
+    res.status(404).send('User not found')
+  }
+})
+
+
 
 //Route to display the form to create a new training plan. It should come beofre :trainingId
 trainingRouter.get('/:userId/training/new', (req, res) => {
@@ -35,10 +55,32 @@ trainingRouter.post('/:userId/training/new', (req, res) => {
 
 // Route with :userId and :trainingId as parameters
 // This comes after the more specific /new route
-trainingRouter.get('/:usersId/training/:trainingId', (req, res) => {
-  const trainingId = req.params.trainingId
-  res.send(`User id: ${req.userId}. Training id: ${trainingId}. Infos about specific training:`)
+trainingRouter.get('/:userId/training/:trainingId', (req, res) => {
+  const user = trainingData.find(user => user.userId.toLocaleLowerCase() === req.userId.toLocaleLowerCase())
+  if (!user) {
+    res.status(404).send(`Username '${req.userId}' not found.`)
+  }
+  //asyncronus function? -> prove if user and trianinid exist at the same time?
+  const training = user.userPastTrainings.find(training => training.trainingId === req.params.trainingId)
+  if (training) {
+    console.log(training)
+    const { trainingId, trainingType, trainingPhase, exercises } = training
+    res.render('app/training/training', {
+      trainingId: trainingId,
+      trainingType: trainingType,
+      trainingPhase: trainingPhase,
+      exercises: exercises
+    })
+  } else {
+    res.status(404).send(`Training id "${req.params.trainingId}" not found.`)
+  }
+
+  // res.send(`User id: ${req.userId}. Training id: ${trainingId}. Infos about specific training:`)
 })
+
+
+
+
 
 
 export default trainingRouter;
