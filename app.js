@@ -1,4 +1,6 @@
 import express from 'express';
+
+//import middlewares
 import { logger } from './middlewares/logger.js';
 
 //import Routers
@@ -21,8 +23,8 @@ app.use(express.urlencoded({ extended: true }));
 //landing page
 app.use('/', homeRouter);
 
-//training feature
-app.use('/app/training', trainingRouter);
+//User Training Router
+app.use('/app/users', trainingRouter)
 
 //cookies se-19
 app.use('/cookies', cookiesRouter);
