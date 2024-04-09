@@ -1,1 +1,1 @@
-export const currentDate = new Date().toDateString()
+export const currentDate = new Date().toDateString();

@@ -1,4 +1,3 @@
 export const convertToDollar = (priceInCents) => {
-  return '$' + (priceInCents / 100)
-}
-
+  return '$' + priceInCents / 100;
+};
