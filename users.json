@@ -7,6 +7,7 @@
     "userPastTrainings": [
       {
         "trainingId": "001",
+        "trainingTime": 50,
         "trainingType": "Leg Day",
         "trainingPhase": "Strength Training",
         "exercises": [
@@ -32,6 +33,7 @@
     "userPastTrainings": [
       {
         "trainingId": "001",
+        "trainingTime": 45,
         "trainingType": "Leg Day",
         "trainingPhase": "Strength Training",
         "exercises": [
@@ -49,6 +51,7 @@
       },
       {
         "trainingId": "002",
+        "trainingTime": 35,
         "trainingType": "Cardio",
         "trainingPhase": "Warm-up",
         "exercises": [
@@ -69,6 +72,7 @@
     "userPastTrainings": [
       {
         "trainingId": "001",
+        "trainingTime": 28,
         "trainingType": "Upper Body",
         "trainingPhase": "Hypertrophy",
         "exercises": [
@@ -86,6 +90,7 @@
       },
       {
         "trainingId": "002",
+        "trainingTime": 45,
         "trainingType": "Cardio",
         "trainingPhase": "Warm-up",
         "exercises": [
@@ -98,6 +103,7 @@
       },
       {
         "trainingId": "003",
+        "trainingTime": 30,
         "trainingType": "Yoga",
         "trainingPhase": "Stretching",
         "exercises": [

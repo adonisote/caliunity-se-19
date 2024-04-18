@@ -22,6 +22,7 @@ trainingRouter.get('/training/', (req, res) => {
     userGoal: req.user.userGoal,
     userGoalStatus: req.user.userGoalStatus,
     userTotalWorkouts: req.user.userTotalWorkouts,
+    userPastTrainings: req.user.userPastTrainings
   });
 });
 

@@ -19,7 +19,18 @@
     <div class="goal">Status: <%= userGoalStatus %> </div>
     <h5>Stats</h5>
     <p>Total workouts: <%= userTotalWorkouts %> </p>
-    <p>Average workout: (will be add when data available) min</p>
+    <p>Total training time: 
+      <% let totalTime = 0 %>
+      <% userPastTrainings.forEach(training => { %>        
+        <% console.log(training["trainingTime"]) %>
+        <% totalTime += training["trainingTime"] %>
+        <% console.log(totalTime) %>
+      <% }); %>
+      <%= totalTime %>
+    </p>
+    <p>Average workout: 
+      <% let averageTime = totalTime / userPastTrainings.length %>
+      <%= Math.round(averageTime) %>min</p>
     <p></p>
     <h5>Upcoming</h5>
     <p><%= currentDate  %></p>
