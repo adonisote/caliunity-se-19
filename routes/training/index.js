@@ -64,4 +64,9 @@ trainingRouter.get('/training/:trainingId', (req, res) => {
   });
 });
 
+trainingRouter.get('/data/json', (req, res) => {
+  res.json({ mssg: "welcome to the api" })
+})
+
+
 export default trainingRouter;

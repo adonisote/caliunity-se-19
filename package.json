@@ -23,7 +23,8 @@
   "homepage": "https://github.com/adonisote/caliunity-se-19#readme",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.3"
+    "express": "^4.18.3",
+    "mongodb": "^6.5.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.0",
