@@ -41,14 +41,30 @@ trainingRouter.get('/records', async (req, res) => {
 
 })
 
+trainingRouter.get('/records/:id', async (req, res) => {
+  try {
+    const id = req.params.id
+    const record = await Record.findOne({ _id: id }).exec()
+
+    if (!record) throw new Error('Record not found')
+
+    res.render('app/training/show', {
+      record: record
+    })
+
+  } catch (error) {
+    console.log(error)
+    res.status(500).send('Could not find the record id')
+  }
+
+})
+
 //Route to display the form to create a new training plan. It should come beofre :trainingId
 trainingRouter.get('/training/new', (req, res) => {
   res.render('app/training/new');
 });
 
-//Route to handle submission of the form
-
-//Create training post to real database
+//Route to handle submission of the record form. Create a record in mongodb
 trainingRouter.post('/training/new', async (req, res) => {
   try {
     //let date = new Date().toDateString();
