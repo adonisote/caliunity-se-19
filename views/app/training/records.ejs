@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Records</title>
+</head>
+<body>
+  <section>
+    <h1>Records</h1>    
+    <% records.forEach( (record, index) => { %>
+      <div>
+        <h2>Training <%= index +1 %></h2>
+        <p><span>Id:</span> <%= record._id %> </p>
+        <p><span>Duration:</span> <%= record.duration %></p>
+        <p><span>Type:</span> <%= record.type %></p>
+        <p><span>Phase:</span> <%= record.phase %></p>
+        <h4>Exercises</h4>
+        <ul>
+          <% record.exercises.forEach(exercise => { %>
+            <li> <%= exercise %> </li>  
+          <% }); %>
+        </ul>
+        <h4>Equipment</h4>
+        <ul>
+          <% record.equipment.forEach(equipment => { %>
+            <li><%= equipment %></li>
+          <% }) %>
+        </ul>
+      </div>
+    <% }); %>
+    
+  </section>
+  
+</body>
+</html>

@@ -24,6 +24,23 @@ trainingRouter.get('/training/', (req, res) => {
   });
 });
 
+//Records Dashboard
+trainingRouter.get('/records', async (req, res) => {
+  try {
+    const records = await Record.find({}).exec()
+    res.render('app/training/records', {
+      records: records
+    })
+  } catch (error) {
+    console.log(error)
+
+    res.render('app/training/records', {
+      records: []
+    })
+  }
+
+})
+
 //Route to display the form to create a new training plan. It should come beofre :trainingId
 trainingRouter.get('/training/new', (req, res) => {
   res.render('app/training/new');
