@@ -1,18 +1,16 @@
 import express from 'express';
 
-//import fake training data
-// import trainingData from '../../users.json' assert { type: 'json' }
-
 //import helpers
 import { currentDate } from '../../helpers/training.js';
 
 //import Middlewares
 import { userIdMiddleware } from '../../middlewares/userId.js';
 
+//import models
+import Record from '../../models/record.js';
+
 const trainingRouter = express.Router();
 
-//specify userId Middleware
-// trainingRouter.use("/:userId", userIdMiddleware)
 
 //Fake training data dashboard
 trainingRouter.get('/training/', (req, res) => {
@@ -32,13 +30,28 @@ trainingRouter.get('/training/new', (req, res) => {
 });
 
 //Route to handle submission of the form
-trainingRouter.post('/training/new', (req, res) => {
-  let date = new Date().toDateString();
-  const { type, phase, exName, exReps } = req.body;
-  console.log('Info: ', req.body);
-  res.send(
-    `Thank you for your entry. Date: ${date}. Type: ${type}. Phase ${phase}. Exercise: ${exName}. Reps: ${exReps}`
-  );
+
+//Create training post to real database
+trainingRouter.post('/training/new', async (req, res) => {
+  try {
+    //let date = new Date().toDateString();
+    const record = new Record({
+      duration: req.body.duration,
+      type: req.body.type,
+      phase: req.body.phase,
+      exercises: req.body.exercises,
+      equipment: req.body.equipment
+    })
+    const result = await record.save()
+    res.status(200).json(result)
+    console.log('Record created')
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'The record could not be created' })
+
+  }
+
+
 });
 
 // Route with :userId and :trainingId as parameters

@@ -12,12 +12,14 @@
   <header></header>
   <main>
     <div class="new-form">
-      <form id="new-log" action="new" method="post">
+      <form  action="new" id="new-log" method="post">
         <div>
           <h1>Training Plan</h1>
+          <label for="duration">Duration</label>
+          <input type="number" name="duration" placeholder="min" required>
           <label for="type">Workout Type:</label>
           <section>
-            <input type="text" id="type" name="type" placeholder="Type" list="typeList" required />
+            <input type="text" id="type" name="type" list="typeList" required />
             <datalist id="typeList">
               <option value="legs">Leg Day</option>
               <option value="push">Push Day</option>
@@ -26,7 +28,7 @@
           </section>
           <label for="phase">Workout Phase:</label>
           <section>
-            <input type="text" id="phase" name="phase" placeholder="Workout Phase" list="phaseList" required />
+            <input type="text" id="phase" name="phase" list="phaseList" required />
 
             <datalist id="phaseList">
               <option value="warm-up">Warm-up</option>
@@ -36,30 +38,75 @@
               <option value="cooldown">Cooldown</option>
             </datalist>
           </section>
-          <section>
-            <ul>
-              <li>
-                <label for="exName">Exercise name:</label>
-                <input type="text" id="exName" name="exName" required />
-              </li>
-              <li>
-                <label for="exReps">Reps:</label>
-                <input type="number" id="exReps" name="exReps" required />
-              </li>
-              <li>
-                <label for="exSets">Sets:</label>
-                <input type="number" id="exSets" name="exSets" required />
-              </li>
-            </ul>
+          <section id="exercises-section">
+            <h3>Exercises</h3>
           </section>
+          <button type="button" onclick="addExercise()">Add Exercise</button>          
+          <section id="equipment-section">
+            <h3>Equipment</h3>
+          </section>
+          <button type="button" onclick="addEquipment()">Add Equipment</button>
+          
+          
         </div>
       </form>
+      <h5>Well done!</h5>
       <section>
         <button type="reset" form="new-log">Reset</button>
         <button type="submit" form="new-log">Create</button>
       </section>
     </div>
+    <template id="exercise-template">
+      <div>
+        <ul>  
+          <li>
+            <label for="exercise-name">Exercise name:</label>
+            <input type="text" id="exercise-name" name="exercises[0].name" required />
+          </li>
+          <!-- <li>
+            <label for="exercise-reps">Reps:</label>
+            <input type="number" id="exercise-reps" name="exercises[0].reps" required />
+          </li>
+          <li>
+            <label for="exercise-sets">Sets:</label>
+            <input type="number" id="exercise-sets" name="exercises[0].sets" required />
+          </li> -->
+        </ul>
+      </div>
+    </template>
+    <template id="equipment-template">
+      <div>
+        <label for="equipment">Name</label>
+        <input type="text" id="equipment" name="equipment[]">
+      </div>
+
+    </template>
   </main>
+  <script>
+    let exerciseIndex = 0
+    const addExercise = () => {
+      const template = document.getElementById('exercise-template')
+      const newExercise = template.content.cloneNode(true)
+      
+      const inputs = newExercise.querySelectorAll('input')
+      inputs.forEach( input => {
+        const [prefix, attribute] = input.name.split('.')// Separate 'exercises' and the attribute
+        input.name = `exercises[${exerciseIndex}].${attribute}`
+      });
+      
+      exerciseIndex++; // Increment the index for new exercises
+      //Update the input names to the use the correct index
+
+
+      document.getElementById('exercises-section').appendChild(newExercise)
+    }
+
+    const addEquipment = () => {
+      const equipmentTemplate = document.getElementById("equipment-template")
+      const newEquipment = equipmentTemplate.content.cloneNode(true)
+      document.getElementById('equipment-section').appendChild(newEquipment)
+    }
+  </script>
 </body>
 
 </html>

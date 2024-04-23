@@ -1,5 +1,8 @@
 import express from 'express';
 
+//mongoose
+import mongoose from 'mongoose'
+
 //import middlewares
 import { logger } from './middlewares/logger.js';
 import { userIdMiddleware } from './middlewares/userId.js';
@@ -12,6 +15,14 @@ import cookiesRouter from './routes/cookies/index.js';
 
 const PORT = 3000;
 const app = express();
+
+//db
+mongoose.connect('mongodb://127.0.0.1:27017/logbook2')
+  .then((client) => {
+    console.log('💽 Database connected')
+  })
+  .catch(error => console.error(error))
+
 //specify engine to to render ejs
 app.set('view engine', 'ejs');
 
