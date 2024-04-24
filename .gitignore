@@ -3,3 +3,6 @@ node_modules
 
 #ignore automatic mac files
 .DS_Store
+
+#environment variable
+.env

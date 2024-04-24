@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from 'express';
 
 //mongoose
@@ -13,13 +14,12 @@ import trainingRouter from './routes/training/index.js';
 import cookiesRouter from './routes/cookies/index.js';
 
 
-const PORT = 3000;
 const app = express();
 
 // Middleware to parse JSON
 app.use(express.json())
 //db
-mongoose.connect('mongodb://127.0.0.1:27017/logbook2')
+mongoose.connect(process.env.MONGODB_URI)
   .then((client) => {
     console.log('💽 Database connected')
   })
@@ -44,4 +44,4 @@ app.use('/app/users/:userId', userIdMiddleware, trainingRouter);
 //cookies se-19
 app.use('/cookies', cookiesRouter);
 
-app.listen(PORT, () => console.log(`server listening on port ${PORT}`));
+app.listen(process.env.PORT, () => console.log(`server listening on port ${process.env.PORT}`));
