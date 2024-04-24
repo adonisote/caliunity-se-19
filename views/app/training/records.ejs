@@ -10,7 +10,9 @@
     <h1>Records</h1>    
     <% records.forEach( (record, index) => { %>
       <div>
-        <h2>Training <%= index +1 %></h2>
+        <a href="/app/users/<%= userId %>/records/<%= record._id  %>">
+          <h2>Training <%= index +1 %></h2>
+        </a>
         <p><span>Id:</span> <%= record._id %> </p>
         <p><span>Duration:</span> <%= record.duration %></p>
         <p><span>Type:</span> <%= record.type %></p>

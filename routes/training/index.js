@@ -27,9 +27,11 @@ trainingRouter.get('/training/', (req, res) => {
 //Records Dashboard
 trainingRouter.get('/records', async (req, res) => {
   try {
+    const userId = req.user.userId
     const records = await Record.find({}).exec()
     res.render('app/training/records', {
-      records: records
+      records: records,
+      userId: userId
     })
   } catch (error) {
     console.log(error)
@@ -43,13 +45,15 @@ trainingRouter.get('/records', async (req, res) => {
 
 trainingRouter.get('/records/:id', async (req, res) => {
   try {
+    const userId = req.user.userId
     const id = req.params.id
     const record = await Record.findOne({ _id: id }).exec()
 
     if (!record) throw new Error('Record not found')
 
     res.render('app/training/show', {
-      record: record
+      record: record,
+      userId: userId
     })
 
   } catch (error) {
@@ -122,6 +126,21 @@ trainingRouter.post('/records/:id', async (req, res) => {
     console.log(error)
     res.status(500).json({ error: 'The record id could not be updated.' })
 
+  }
+})
+
+trainingRouter.get('/records/:id/delete', async (req, res) => {
+  try {
+    const userId = req.user.userId
+    const id = req.params.id
+    const record = Record.findOne({ _id: id })
+    if (!record) throw new Error('Record id not found')
+    await Record.findOneAndDelete({ _id: id })
+    res.redirect(`/app/users/${userId}/records`)
+
+  } catch (error) {
+    console.log(error)
+    req.status(500).json({ error: 'No record  was deleted' })
   }
 })
 

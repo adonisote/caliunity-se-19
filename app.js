@@ -16,6 +16,8 @@ import cookiesRouter from './routes/cookies/index.js';
 const PORT = 3000;
 const app = express();
 
+// Middleware to parse JSON
+app.use(express.json())
 //db
 mongoose.connect('mongodb://127.0.0.1:27017/logbook2')
   .then((client) => {

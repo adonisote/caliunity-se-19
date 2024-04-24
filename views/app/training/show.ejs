@@ -6,23 +6,30 @@
   <title>Document</title>
 </head>
 <body>
-  <h2>Training</h2>
-        <p><span>Id:</span> <%= record._id %> </p>
-        <p><span>Duration:</span> <%= record.duration %></p>
-        <p><span>Type:</span> <%= record.type %></p>
-        <p><span>Phase:</span> <%= record.phase %></p>
-        <h4>Exercises</h4>
-        <ul>
-          <% record.exercises.forEach(exercise => { %>
-            <li> <%= exercise %> </li>  
-          <% }); %>
-        </ul>
-        <h4>Equipment</h4>
-        <ul>
-          <% record.equipment.forEach(equipment => { %>
-            <li><%= equipment %></li>
-          <% }) %>
-        </ul>
+
+  <main>
+    <h2>Training</h2>
+    <p><span>Id:</span> <%= record._id %> </p>
+    <p><span>Duration:</span> <%= record.duration %></p>
+    <p><span>Type:</span> <%= record.type %></p>
+    <p><span>Phase:</span> <%= record.phase %></p>
+    <h4>Exercises</h4>
+    <ul>
+      <% record.exercises.forEach(exercise => { %>
+        <li> <%= exercise %> </li>  
+      <% }); %>
+    </ul>
+    <h4>Equipment</h4>
+    <ul>
+      <% record.equipment.forEach(equipment => { %>
+        <li><%= equipment %></li>
+      <% }) %>
+    </ul>
+    <button type="button" onclick="location.href='<%= record._id %>/edit'">Edit</button>
+    <button type="button" onclick="location.href='<%= record._id%>/delete'">Delete</button>
+    <button type="button" onclick="location.href='/app/users/<%= userId %>/records'">Go Back</button>
+    
+  </main>
   
 </body>
 </html>
