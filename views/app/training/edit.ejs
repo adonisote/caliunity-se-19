@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <div class="new-form">
+      <h1>Edit record</h1>
+      <form action="/app/users/<%= userId %>/records/<%= record._id %>" id="update-log" method="post">
+        <div>
+          <h1>Training Plan</h1>
+          <label for="duration">Duration</label>
+          <input type="number" value="<%= record.duration %>" name="duration" placeholder="min" required>
+          <label for="type">Workout Type:</label>
+          <section>
+            <input type="text" value="<%= record.type %>"id="type" name="type" list="typeList" required />
+            <datalist id="typeList">
+              <option value="legs">Leg Day</option>
+              <option value="push">Push Day</option>
+              <option value="pull">Pull Day</option>
+            </datalist>
+          </section>
+          <label for="phase">Workout Phase:</label>
+          <section>
+            <input type="text" value="<%= record.phase %>" id="phase" name="phase" list="phaseList" required />
+
+            <datalist id="phaseList">
+              <option value="warm-up">Warm-up</option>
+              <option value="strenght">
+                Strength Training
+              </option>
+              <option value="cooldown">Cooldown</option>
+            </datalist>
+          </section>
+          <section id="exercises-section">
+            <h3>Exercises</h3>
+            <% record.exercises.forEach(exercise => { %>
+              <div>
+                <ul>
+                  <li>
+                    <label for="exercise-name">Exercise name:</label>
+                    <input value="<%= exercise %>" type="text" id="exercise-name" name="exercises[0].name" required>
+                  </li>
+                </ul>
+              </div>
+            <% }); %>
+          </section>
+          <button type="button" onclick="addExercise()">Add Exercise</button>          
+          <section id="equipment-section">
+            <h3>Equipment</h3>
+            <% record.equipment.forEach(equipment => { %>
+              <div>
+                <label for="equipment">Name</label>
+                <input type="text" value="<%= equipment %>" id="equipment" name="equipment[]">
+                </div>
+
+            <% }) %>
+          </section>
+          <button type="button" onclick="addEquipment()">Add Equipment</button>
+        </div>
+      </form>
+      <section>
+        <button type="button" form="update-log">Cancel</button>
+        <button type="submit" form="update-log">Update</button>
+      </section>
+      <template id="exercise-template">
+        <div>
+          <ul>  
+            <li>
+              <label for="exercise-name">Exercise name:</label>
+              <input type="text" id="exercise-name" name="exercises[0].name" required />
+            </li>
+            <!-- <li>
+              <label for="exercise-reps">Reps:</label>
+              <input type="number" id="exercise-reps" name="exercises[0].reps" required />
+            </li>
+            <li>
+              <label for="exercise-sets">Sets:</label>
+              <input type="number" id="exercise-sets" name="exercises[0].sets" required />
+            </li> -->
+          </ul>
+        </div>
+      </template>
+      <template id="equipment-template">
+        <div>
+          <label for="equipment">Name</label>
+          <input type="text" id="equipment" name="equipment[]">
+        </div>
+  
+      </template>
+
+    </div>
+
+  </main>
+  <script>
+    let exerciseIndex = 0
+    const addExercise = () => {
+      const template = document.getElementById('exercise-template')
+      const newExercise = template.content.cloneNode(true)
+      
+      const inputs = newExercise.querySelectorAll('input')
+      inputs.forEach( input => {
+        const [prefix, attribute] = input.name.split('.')// Separate 'exercises' and the attribute
+        input.name = `exercises[${exerciseIndex}].${attribute}`
+      });
+      
+      exerciseIndex++; // Increment the index for new exercises
+      //Update the input names to the use the correct index
+
+
+      document.getElementById('exercises-section').appendChild(newExercise)
+    }
+
+    const addEquipment = () => {
+      const equipmentTemplate = document.getElementById("equipment-template")
+      const newEquipment = equipmentTemplate.content.cloneNode(true)
+      document.getElementById('equipment-section').appendChild(newEquipment)
+    }
+  </script>
+
+  
+</body>
+</html>

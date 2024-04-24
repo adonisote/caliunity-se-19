@@ -87,6 +87,44 @@ trainingRouter.post('/training/new', async (req, res) => {
 
 });
 
+//Route to edit the record from the database
+trainingRouter.get('/records/:id/edit', async (req, res) => {
+  try {
+    const id = req.params.id
+    const record = await Record.findOne({ _id: id }).exec()
+    if (!record) throw new Error("Record not found")
+
+    res.render('app/training/edit',
+      {
+        record: record,
+        userId: req.user.userId,
+      })
+
+  } catch (error) {
+    console.log(error)
+    res.status(500).send("Could not find record id")
+  }
+})
+
+
+trainingRouter.post('/records/:id', async (req, res) => {
+  try {
+    const id = req.params.id
+    const record = await Record.findOneAndUpdate(
+      { _id: id },
+      req.body,
+      { new: true }
+    )
+    if (!record) throw new Error('Record not found')
+
+    res.redirect(`${record._id}`)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'The record id could not be updated.' })
+
+  }
+})
+
 // Route with :userId and :trainingId as parameters
 // This comes after the more specific /new route
 trainingRouter.get('/training/:trainingId', (req, res) => {
